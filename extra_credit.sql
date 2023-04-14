@@ -24,7 +24,7 @@ CREATE TABLE schedule (
 	FOREIGN KEY (roomid) REFERENCES rooms(id),
 	FOREIGN KEY (timeslotid) REFERENCES timeslots(id),
 	UNIQUE (roomid, timeslotid)
-)
+);
 
 INSERT INTO timeslots VALUES (1, '08:30:00', '10:20:00');
 INSERT INTO rooms VALUES (1, 400, (SELECT id FROM buildings WHERE name = 'Mary Gates Hall'), 40);
